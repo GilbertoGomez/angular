@@ -3,20 +3,20 @@
   <div class="row">
     <div class="col-lg-12">
       <h1 class="page-header">Demo 3</h1>
-      <fomr role="form">
+      <fomr role="form" ng-controller="Demo3Controller as zy">
         <div class="form-group">
           <label for="mail">Correo</label>
-          <input type="email" id="DemoEmail" data-ng-value="user.mail" placeholder="Introduce Email" class="form-control"/>
+          <input type="email" id="Demomail" ng-model="zy.mail" placeholder="Introduce Email" class="form-control"/>
         </div>
         <div class="form-group">
           <label for="pas">Contraseña</label>
-          <input type="password" id="DemoPas" data-ng-value="user.pas" placeholder="Contraseña" class="form control"/>
+          <input type="password" id="DemoPas" ng-model="zy.pas" placeholder="Contraseña" class="form control"/>
         </div>
         <div class="form-group">
-          <label for="archi">Adjuntar Archivo</label>
-          <input type="file" id="DemoArch" data-ng-value="user.archi" class="form-control"/>
+          <label for="file">Adjuntar Archivo</label>
+          <input type="file" id="Demofile" ng-model="zy.file" class="form-control"/>
         </div>
-        <button type="submit" data-ng-click="add()" class="btn btn-default">Enviar</button>
+        <button type="submit" ng-click="add()" class="btn btn-default">Enviar</button>
       </fomr>
     </div>
   </div>

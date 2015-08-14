@@ -26,7 +26,7 @@ gulp.task('js', function (){
 })
 
 gulp.task('css',function (){
-	gulp.src('./lib/*.css')
+	gulp.src('./lib/css/*.css')
 	.pipe(conc('index.css'))
 	.pipe(mini())
 	.pipe(gulp.dest('./public/css/'))

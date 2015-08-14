@@ -42,6 +42,18 @@ span {
   width: 250px;
   height: 100%;
 }
+.pie {
+  position: relative;
+  background: #000;
+  color: #f00;
+}
+.datos {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  margin-top: 5px;
+  font-size: 25px;
+}
 .holaa {
   position: absolute;
   background: #222;
@@ -74,6 +86,16 @@ span {
   font-size: 15px;
   font-weight: bold;
 }
+#grafica {
+  position: relative;
+  padding: 0 10px 0 10px;
+  left: -15px;
+}
+#chart-area {
+  position: relative;
+  padding: 0 10px 0 10px;
+  left: -15px;
+}
 .glyphicon-cloud {
   font-size: 70px;
   position: relative;
@@ -98,16 +120,6 @@ span {
 .panel-orange {
   background: #ffa500;
   color: #fff;
-}
-#canvas-holder {
-  width: 67%;
-}
-#chart_div {
-  width: 90%;
-  height: auto;
-  margin: 0;
-  padding: 0;
-  font-size: 65px;
 }
 .icono-mensajes:after {
   font-family: iconos;
@@ -198,33 +210,9 @@ span {
     margin: 0;
   }
 }
-@media screen and (max-width: 1230px) {
-  #chart_div {
-    width: 75%;
-    height: auto;
-    margin: 0;
-    padding: 0;
+@media screen and (max-width: 450px) {
+  .datos {
+    text-align: center;
+    font-size: 15px;
   }
-}
-@media screen and (max-width: 519px) {
-  #chart_div {
-    width: auto;
-    height: auto;
-    margin: 0;
-    padding: 0;
-  }
-}
-@media screen and (max-width: 389px) {
-  #chart_div {
-    border: 5px solid #ffc0cb;
-    width: 100%;
-    height: auto;
-    margin: 0;
-    padding: 0;
-  }
-}
-.pie {
-  position: relative;
-  background: #000;
-  color: #f00;
 }

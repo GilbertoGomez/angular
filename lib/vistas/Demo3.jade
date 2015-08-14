@@ -2,14 +2,14 @@ div.cont
 	div.row
 		div.col-lg-12
 			h1.page-header Demo 3
-			fomr(role='form')
+			fomr(role='form' ng-controller="Demo3Controller as zy")
 				div.form-group
 					label(for='mail') Correo
-					input.form-control(type='email' id='DemoEmail' data-ng-value="user.mail" placeholder='Introduce Email')
+					input.form-control(type='email' id='Demomail' ng-model="zy.mail" placeholder='Introduce Email')
 				div.form-group
 					label(for='pas') Contraseña
-					input.form.control(type='password' id='DemoPas' data-ng-value="user.pas" placeholder='Contraseña')
+					input.form.control(type='password' id='DemoPas' ng-model="zy.pas" placeholder='Contraseña')
 				div.form-group
-					label(for='archi') Adjuntar Archivo
-					input.form-control(type='file' id='DemoArch' data-ng-value="user.archi")
-				button.btn.btn-default(type='submit' data-ng-click="add()") Enviar
+					label(for='file') Adjuntar Archivo
+					input.form-control(type='file' id='Demofile' ng-model="zy.file")
+				button.btn.btn-default(type='submit' ng-click="add()") Enviar
