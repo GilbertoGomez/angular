@@ -34,6 +34,13 @@ span {
   padding: 0px 30px;
   border-left: 1px solid #e7e7e7;
 }
+.datos {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  margin-top: 5px;
+  font-size: 25px;
+}
 .barra {
   background: transparent;
 }

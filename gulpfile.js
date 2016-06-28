@@ -10,7 +10,8 @@ var source = require('vinyl-source-stream')
 var conc = require('gulp-concat')
 var uglify = require('gulp-uglify')
 var comp = require('gulp-compressor')
-var mini = require('gulp-minify-css')
+var mini = require('gulp-clean-css')
+var pug = require('gulp-pug');
 
 
 gulp.task('js', function (){
@@ -26,8 +27,18 @@ gulp.task('js', function (){
 })
 
 gulp.task('css',function (){
-	gulp.src('./lib/*.css')
+	gulp.src('./lib/css/*.css')
 	.pipe(conc('index.css'))
-	.pipe(mini())
+	.pipe(mini({
+		pretty:false
+	}))
 	.pipe(gulp.dest('./public/css/'))
 })
+
+gulp.task('html', function buildHTML() {
+  gulp.src('./lib/vistas/index.pug')
+  .pipe(pug({
+  	pretty: false
+  }))
+  .pipe(gulp.dest('./public/pages/'))
+});
