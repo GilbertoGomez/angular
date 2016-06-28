@@ -1,0 +1,56 @@
+doctype html
+html(lang="es")
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width initial-scale=1.0")
+		script(src="public/js/chart.js" type="text/javascript")
+		link(href="public/css/index.css" rel="stylesheet")
+		link(rel="icon" href="public/favicon.ico" type="image/x-icon")
+		link(rel="shortcut icon" href="public/favicon.ico" type="image/x-icon")
+		script(src="public/js/index.js" type="text/javascript")
+		title Demo Angular SPA
+	body(ng-app="demoApp")
+		div.contenedor
+			nav.navbar.navbar-default.navbar-static-top(role="navigation")
+				div.container-fluid
+					div.navbar-header
+						button.navbar-toggle(type="button" data-toggle="collapse" data-target="#hola")
+							span.sr-only.toggle
+							span.icon-bar
+							span.icon-bar
+							span.icon-bar
+						a.navbar-brand(href="#/") Mi proyecto
+					div.collapse.navbar-collapse(id="hola")
+						ul.nav.navbar-nav
+							li
+								a(href="#/Demo2")
+									span Demo 2
+							li 
+								a(href="#/Demo3")
+									span Demo 3
+							li.dropdown
+								a.dropdown-toggle(data-toggle="dropdown") Plus 
+									b.caret
+								ul.dropdown-menu
+									li
+										a(href="#/") Inicio
+									li
+										a(href="#/Demo2") Demo 2
+									li 
+										a(href="#/Demo3") Demo 3
+						form.navbar-form.navbar-static-top(action="#")
+							div.form-group
+							input.form-control(type="text" placeholder="buscar..")
+						aside
+							div.nav.navbar-pills.navbar-left
+								span.navbar-heder
+									ul.nav.nav-tabs
+										li(role="presentation")
+											a.icono-graph(href="#") Graficas
+										li
+											a.icono-camera(href="#") Fotos
+										li
+											a.icono-cog(href="#") Configuracion
+										li
+											a.icono-game(href="#") Juegos
+	div(ng-view)
